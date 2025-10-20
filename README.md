@@ -16,9 +16,13 @@ RECENT_GAMES=Change to amount of games in the past you want
 END .env file
 
 To start do -
+# 1)
 sudo docker-compose build
+# 2)
 sudo docker-compose up -d
+# 3)
 sudo docker-compose exec db psql -U nfl -d nfl -c "SELECT now();"
+# 4)
 sudo docker-compose exec app python -m app.etl.odds_draftkings
 # 5) DraftKings odds (fills odds_raw)
 sudo docker-compose exec app python -m app.etl.odds_draftkings
@@ -51,7 +55,7 @@ export START=2025-10-20   # Monday
 export END=2025-10-26     # Sunday
 
 Once everything is set up doing above, run this command to see predictions
-
+# FINAL COMMAND TO SEE ODDS
 sudo docker-compose exec -T db psql -U nfl -d nfl -t -A -c "
 WITH name_map(team_full, code) AS (
   VALUES
