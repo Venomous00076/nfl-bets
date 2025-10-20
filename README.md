@@ -52,6 +52,7 @@ sudo docker-compose exec app python -m app.pipeline
 
 # Set your week window in local (America/Chicago) dates
 export START=2025-10-20   # Monday
+
 export END=2025-10-26     # Sunday
 
 Once everything is set up doing above, run this command to see predictions
