@@ -1,3 +1,5 @@
+Put below in a .env file changing what you want to change.
+
 # Postgres (leave as-is unless you changed compose)
 DATABASE_URL=postgresql+psycopg2://nfl:nfl@db:5432/nfl
 
